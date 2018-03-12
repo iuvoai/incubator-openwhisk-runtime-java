@@ -27,6 +27,9 @@ RUN update-alternatives --install "/usr/bin/java" "java" "${JRE_HOME}/bin/java" 
   update-alternatives --set java "${JRE_HOME}/bin/java" && \
   update-alternatives --set javac "${JAVA_HOME}/bin/javac"
 
+RUN apt update
+RUN apt-get install git -y
+
 ADD proxy /javaAction
 
 RUN rm -rf /javaAction/.classpath /javaAction/.gitignore /javaAction/.gradle /javaAction/.project /javaAction/.settings /javaAction/Dockerfile /javaAction/build
