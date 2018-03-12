@@ -6,6 +6,7 @@ repositories {
 
 dependencies {
     compile 'com.google.code.gson:gson:2.6.2'
+    compile 'org.scala-lang:scala-library:2.12.4'
 }
 
 jar {
